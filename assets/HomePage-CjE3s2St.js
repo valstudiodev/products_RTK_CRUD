@@ -1,2 +1,0 @@
-import{a as e,i as t}from"./index-D3W2aV8U.js";import{t as n}from"./Section-CRZCf2zK.js";var r=e();function i(){let e=`home-page`;return(0,r.jsx)(n,{className:e,children:(0,r.jsx)(t,{className:`${e}__container`,children:(0,r.jsx)(`h1`,{className:`text-center\r
-        text-white text-5xl py-10`,children:`Home page`})})})}export{i as default};
