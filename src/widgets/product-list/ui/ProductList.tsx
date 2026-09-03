@@ -1,7 +1,7 @@
 import { useGetProductsQuery } from '@/app/api/baseApi';
 import '../model/productListStyles.scss';
 import ProductCard from '@/entities/product/ui/ProductCard';
-import { Link } from "@/shared/ui";
+import { Link } from 'react-router';
 
 function ProductList(): React.JSX.Element {
   const classProductList = 'product-list'
@@ -24,7 +24,7 @@ function ProductList(): React.JSX.Element {
           className={`${classProductList}__item`}
         >
           <Link
-            href={`/products/${product.id}`}
+            to={`/products/${product.id}`}
             className={`${classProductList}__link`}
           >
             <ProductCard product={product} />
