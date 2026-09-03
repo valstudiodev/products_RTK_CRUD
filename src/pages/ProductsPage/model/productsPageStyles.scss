@@ -1,0 +1,14 @@
+@use '../../../shared/styles/variables/variables' as *;
+
+.products-page {
+  padding-block: 50px;
+
+  &__container {}
+
+  &__title {
+    color: $color-text-primary;
+    text-align: center;
+    font-size: 50px;
+    margin-bottom: 20px;
+  }
+}

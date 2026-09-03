@@ -1,0 +1,51 @@
+// =========================
+// Colors
+// =========================
+
+$color-bg: #0f141a;
+$color-surface: #18212b;
+$color-surface-light: #202c38;
+$color-surface-hover: #243342;
+
+$color-border: #2d3b49;
+$color-border-hover: #405469;
+
+$color-text-primary: #f1f5f9;
+$color-text-secondary: #a9b5c1;
+$color-text-muted: #748292;
+
+$color-accent: #4f8dcc;
+$color-accent-hover: #69a4e0;
+
+$color-like: #55b995;
+$color-dislike: #d56d7d;
+
+$color-button: #26394d;
+$color-button-hover: #344d66;
+
+// =========================
+// Shadows
+// =========================
+
+$shadow-card: 0 5px 20px rgba(129, 149, 170, 20%);
+$shadow-details: 0 16px 40px rgb(0 0 0 / 30%);
+
+// =========================
+// Typography
+// =========================
+
+$font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+$font-size-sm: 13px;
+$font-size-md: 15px;
+$font-size-lg: 18px;
+$font-size-xl: 24px;
+$font-size-xxl: 32px;
+
+// =========================
+// Radius
+// =========================
+
+$radius-sm: 6px;
+$radius-md: 10px;
+$radius-lg: 16px;

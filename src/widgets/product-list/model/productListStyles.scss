@@ -1,0 +1,11 @@
+@use '../../../shared/styles/variables/variables' as *;
+
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(400px, 100%), 1fr));
+  gap: 20px;
+
+  &__item {}
+
+  &__link {}
+}

@@ -1,0 +1,1 @@
+export { default as Link } from '@/shared/ui/Link/ui/Link'

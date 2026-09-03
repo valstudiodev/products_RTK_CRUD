@@ -1,0 +1,6 @@
+export { default as HomePage } from '@/pages/HomePage/ui/HomePage'
+export { default as ErrorPage } from '@/pages/ErrorPage/ui/ErrorPage'
+export { default as Page404 } from '@/pages/Page404/ui/Page404'
+export { default as ProductDetailsPage } from '@/pages/Product-details/ui/ProductDetailsPage'
+export { default as ProductCreatePage } from '@/pages/Product-create/ui/ProductCreatePage'
+export { default as ProductEditPage } from '@/pages/Product-edit/ui/ProductEditPage'

@@ -1,0 +1,19 @@
+@use '../../../shared/styles/variables/variables' as *;
+
+.main-menu {
+
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+
+  &__item {}
+
+  &__link {
+
+    &.is-active {
+      color: $color-accent;
+    }
+  }
+}
