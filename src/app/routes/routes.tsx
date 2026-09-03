@@ -38,7 +38,7 @@ export const routes = [
         }
       },
       {
-        path: '/products/create',
+        path: 'products/create',
         id: 'product-create',
         element: (
           <Suspense>
@@ -47,7 +47,7 @@ export const routes = [
         ),
       },
       {
-        path: '/products/:id',
+        path: 'products/:id',
         id: 'product-details',
         element: (
           <Suspense>
