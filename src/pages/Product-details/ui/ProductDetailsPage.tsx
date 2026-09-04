@@ -32,7 +32,10 @@ function ProductDetails(): React.JSX.Element {
       <Container className={`${classProductDetails}__container`}>
         <h1 className={`${classProductDetails}__title`}>Product details</h1>
         <ProductDetail product={data} />
-        <NavigateButton variant='primary' />
+        <NavigateButton
+          variant='outline'
+          className={`${classProductDetails}__btn-navigate`}
+        />
       </Container>
     </Section>
   );

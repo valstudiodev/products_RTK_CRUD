@@ -35,7 +35,10 @@ function ProductEdit(): React.JSX.Element {
         <h1 className='text-center text-white
         text-5xl mb-10'>Product edit</h1>
         <ProductEditForm product={data} />
-        <NavigateButton variant='primary' />
+        <NavigateButton
+          variant='unstyled'
+          className={`${classProductEdit}__btn-navigate`}
+        />
       </Container>
     </Section>
   );

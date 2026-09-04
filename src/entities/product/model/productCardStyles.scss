@@ -4,17 +4,34 @@
   background-color: $color-surface-hover;
   color: $color-text-primary;
   border-radius: 10px;
-  overflow: hidden;
+  // overflow: hidden;
+  border: 1px solid transparent;
   min-height: 100%;
   box-shadow: $shadow-card;
   padding-block: 10px;
   padding-inline: 10px;
+  transition: all 0.3s;
 
   &__inner {
     display: flex;
     flex-direction: column;
     gap: 5px;
     margin-bottom: 20px;
+  }
+
+  &:hover {
+    border-color: $color-accent;
+  }
+
+  &__link {
+    display: block;
+
+    // &.product-card {
+    //   &:hover {
+    //     border: 1px $color-text-primary;
+    //   }
+    // }
+
   }
 
   &__image-wrap {
@@ -73,6 +90,19 @@
         background-color: $color-button-hover;
       }
     }
+
+    &--edit {
+      background-color: $color-accent;
+      border-radius: 10px;
+      padding-inline: 10px;
+      padding-block: 10px;
+      transition: all 0.3s;
+      cursor: pointer;
+
+      &:hover {
+        background-color: $color-accent-hover;
+      }
+    }
   }
 }
 
@@ -84,6 +114,7 @@
   color: $color-text-primary;
   max-width: 600px;
   margin: 0 auto;
+  margin-bottom: 50px;
 
   &__inner {}
 

@@ -22,17 +22,6 @@ function ProductCard({
     }
   }
 
-  // const handleUpdate = async ({ id, data }: UpdateProductRequest): Promise<void> => {
-  //   try {
-  //     const updateProductResult = await updateProduct({ id, data }).unwrap()
-
-  //     console.log('---Update product:', updateProductResult);
-
-  //   } catch (error) {
-
-  //   }
-  // }
-
   return (
     <article className={classProductCard}>
       <Link
@@ -77,6 +66,7 @@ function ProductCard({
 
         <Link
           to={`/products/${product.id}/edit`}
+          className={`${classProductCard}__btn ${classProductCard}__btn--edit`}
         >
           Edit
         </Link>

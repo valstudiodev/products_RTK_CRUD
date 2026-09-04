@@ -10,4 +10,10 @@
     text-align: center;
     margin-bottom: 20px;
   }
+
+  &__btn-navigate {
+    padding-inline: 30px;
+    padding-block: 6px;
+    color: $color-text-muted ;
+  }
 }

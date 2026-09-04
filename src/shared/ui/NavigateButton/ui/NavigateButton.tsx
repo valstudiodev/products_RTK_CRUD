@@ -4,7 +4,7 @@ export interface NavigateButtonProps extends React.ButtonHTMLAttributes<HTMLButt
   to?: 'back' | 'forward' | number;
   fallbackHref?: string;
   onFallbackNavigate?: (href: string) => void;
-  variant?: 'primary' | 'secondary' | 'ghost' | 'outline';
+  variant?: 'primary' | 'secondary' | 'ghost' | 'outline' | 'unstyled';
   children?: React.ReactNode;
 }
 
@@ -12,7 +12,7 @@ export const NavigateButton: React.FC<NavigateButtonProps> = ({
   to = 'back',
   fallbackHref,
   onFallbackNavigate,
-  variant = 'ghost',
+  variant = 'unstyled',
   children,
   className = '',
   onClick,
@@ -52,10 +52,11 @@ export const NavigateButton: React.FC<NavigateButtonProps> = ({
     secondary: 'bg-gray-100 text-gray-900 hover:bg-gray-200',
     ghost: 'text-gray-600 hover:text-gray-900 hover:bg-gray-100',
     outline: 'border border-gray-300 text-gray-700 hover:bg-gray-50',
+    unstyled: '',
   };
 
-  const combinedClasses = `inline-flex items-center gap-2 px-3 
-  py-1.5 rounded-md text-sm font-medium transition-colors cursor-pointer 
+  const combinedClasses = `inline-flex items-center
+    cursor-pointer transition-all duration-300
   ${variantStyles[variant]} ${className}`.trim();
 
   return (
