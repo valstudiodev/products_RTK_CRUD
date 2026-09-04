@@ -1,0 +1,2 @@
+import{o as e,s as t}from"./index-CoLERYW1.js";import{t as n}from"./Section-DwQGEGHC.js";var r=t();function i(){let t=`home-page`;return(0,r.jsx)(n,{className:t,children:(0,r.jsx)(e,{className:`${t}__container`,children:(0,r.jsx)(`h1`,{className:`text-center\r
+        text-white text-5xl py-10`,children:`Home page`})})})}export{i as default};

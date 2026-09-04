@@ -1,0 +1,1 @@
+import{o as e,s as t}from"./index-CoLERYW1.js";import{t as n}from"./Section-DwQGEGHC.js";import{t as r}from"./ProductCreateForm-r19G6I-i.js";var i=t();function a(){let t=`product-create`;return(0,i.jsx)(n,{className:t,children:(0,i.jsxs)(e,{className:`${t}__container`,children:[(0,i.jsx)(`h1`,{children:`Product create page`}),(0,i.jsx)(r,{})]})})}export{a as default};
