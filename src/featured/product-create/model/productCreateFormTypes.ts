@@ -7,5 +7,8 @@ export interface ProductCreateFieldProps {
   value: string | number;
   name: string;
   type?: 'text' | 'number';
+  onFocus?: () => void;
+  onBlur?: () => void;
+  steps?: number;
 }
 

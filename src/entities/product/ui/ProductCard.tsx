@@ -10,7 +10,6 @@ function ProductCard({
 
   const [deleteProduct, { isLoading }] = useDeleteProductMutation()
 
-
   const handleDelete = async (product: Product): Promise<void> => {
 
     try {
@@ -22,6 +21,17 @@ function ProductCard({
 
     }
   }
+
+  // const handleUpdate = async ({ id, data }: UpdateProductRequest): Promise<void> => {
+  //   try {
+  //     const updateProductResult = await updateProduct({ id, data }).unwrap()
+
+  //     console.log('---Update product:', updateProductResult);
+
+  //   } catch (error) {
+
+  //   }
+  // }
 
   return (
     <article className={classProductCard}>
@@ -56,13 +66,20 @@ function ProductCard({
           </div>
         </div>
       </Link>
-      <div className={`${classProductCard}__action`}>
+      <div className={`${classProductCard}__action flex
+      items-center gap-5 justify-between`}>
         <button
           className={`${classProductCard}__btn ${classProductCard}__btn--delete`}
           onClick={() => handleDelete(product)}
         >
           {isLoading ? 'Loading' : 'Delete'}
         </button>
+
+        <Link
+          to={`/products/${product.id}/edit`}
+        >
+          Edit
+        </Link>
       </div>
     </article>
   );

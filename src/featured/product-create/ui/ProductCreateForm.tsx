@@ -5,18 +5,22 @@ import '../model/styles.scss';
 import { useAddProductMutation } from "@/app/api/baseApi";
 import ButtonSubmit from "@/shared/ui/ButtonSubmit/ButtonSubmit";
 
+
+
 function ProductCreateForm(): React.JSX.Element {
   const classCreateForm = 'create-form'
 
-  const [addProduct, { isLoading }] = useAddProductMutation()
-
-  const [formData, setFormData] = useState<CreateProductPayload>({
+  const initialFormData: CreateProductPayload = {
     title: '',
     price: 0,
     description: '',
     category: '',
     brand: ''
-  });
+  }
+
+  const [addProduct, { isLoading }] = useAddProductMutation()
+  const [formData, setFormData] = useState<CreateProductPayload>(initialFormData);
+  const [isPriceFocused, setIsPriceFocused] = useState<boolean>(false);
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>): void => {
     const value = e.target.value
@@ -44,9 +48,20 @@ function ProductCreateForm(): React.JSX.Element {
       const result = await addProduct(formData).unwrap()
 
       console.log('---Add product result:', result);
+
+      setFormData(initialFormData)
+      setIsPriceFocused(false)
     } catch (error) {
       console.log('---Add product ERROR:', error);
     }
+  }
+
+  const handlePriceFocus = (): void => {
+    setIsPriceFocused(true)
+  }
+
+  const handlePriceBlur = (): void => {
+    setIsPriceFocused(false)
   }
 
   return (
@@ -66,8 +81,11 @@ function ProductCreateForm(): React.JSX.Element {
         type="number"
         classParent={`${classCreateForm}__field`}
         onChange={handlePriceChange}
-        value={formData.price}
+        value={isPriceFocused && formData.price === 0 ? '' : formData.price}
         name='price'
+        onFocus={handlePriceFocus}
+        onBlur={handlePriceBlur}
+        steps={0.01}
       />
       <ProductCreateField
         label="Description"

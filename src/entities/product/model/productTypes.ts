@@ -44,3 +44,16 @@ export interface CreateProductPayload {
   category: string;
   brand: string;
 }
+
+export interface UpdateProductPayload {
+  title: string;
+  price: number;
+  description: string;
+  category: string;
+  brand: string;
+}
+
+export interface UpdateProductRequest {
+  id: number;
+  data: UpdateProductPayload;
+}

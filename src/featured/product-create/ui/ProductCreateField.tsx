@@ -8,7 +8,10 @@ function ProductCreateField({
   classParent,
   value,
   name,
-  type = 'text'
+  onFocus,
+  onBlur,
+  steps,
+  type = 'text',
 }: ProductCreateFieldProps): React.JSX.Element {
 
   const id = useId()
@@ -27,6 +30,9 @@ function ProductCreateField({
         onChange={onChange}
         value={value}
         name={name}
+        onFocus={onFocus}
+        onBlur={onBlur}
+        step={steps}
       />
     </div>
   );

@@ -1,5 +1,5 @@
 import { Suspense } from "react";
-import { LazyHomePage, LazyPage404, LazyProductCreatePage, LazyProductDetailPage, LazyProductsPage } from "./lazy-pages";
+import { LazyHomePage, LazyPage404, LazyProductCreatePage, LazyProductDetailPage, LazyProductEdit, LazyProductsPage } from "./lazy-pages";
 import { createBrowserRouter } from "react-router";
 import MainLayout from "@/widgets/MainLayout/ui/MainLayout";
 import ErrorPage from "@/pages/ErrorPage/ui/ErrorPage";
@@ -58,6 +58,15 @@ export const routes = [
           isInMenu: false,
           title: 'Product-detail'
         }
+      },
+      {
+        path: 'products/:id/edit',
+        id: 'product-edit',
+        element: (
+          <Suspense>
+            <LazyProductEdit />
+          </Suspense>
+        ),
       },
       {
         path: '*',
