@@ -1,0 +1,14 @@
+@use '../../../shared/styles/variables/variables' as *;
+
+.btn-submit {
+
+  background-color: $color-button;
+  border-radius: 10px;
+  padding-block: 10px;
+  transition: all 0.3s;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $color-button-hover;
+  }
+}

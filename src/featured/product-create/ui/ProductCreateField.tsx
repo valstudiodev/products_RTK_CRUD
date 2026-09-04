@@ -1,12 +1,13 @@
 import { useId } from "react";
 import { ProductCreateFieldProps } from "../model/productCreateFormTypes";
-
+import '../model/styles.scss';
 
 function ProductCreateField({
   label,
   onChange,
   classParent,
   value,
+  name,
   type = 'text'
 }: ProductCreateFieldProps): React.JSX.Element {
 
@@ -25,6 +26,7 @@ function ProductCreateField({
         type={type}
         onChange={onChange}
         value={value}
+        name={name}
       />
     </div>
   );

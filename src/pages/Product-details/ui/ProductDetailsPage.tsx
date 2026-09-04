@@ -6,6 +6,8 @@ import { useParams } from 'react-router';
 import { skipToken } from '@reduxjs/toolkit/query';
 import ProductDetail from '@/entities/product/ui/ProductDetail';
 import '../model/productDetailsStyles.scss';
+import Loader from '@/shared/ui/Loader/Loader';
+import { NavigateButton } from '@/shared/ui/NavigateButton/ui/NavigateButton';
 
 function ProductDetails(): React.JSX.Element {
   const classProductDetails = 'product-details'
@@ -15,7 +17,7 @@ function ProductDetails(): React.JSX.Element {
   const { data, isLoading, isError } = useGetProductByIdQuery(id ?? skipToken)
 
   if (isLoading) {
-    return <div>Loading...</div>
+    return <Loader />
   }
 
   if (isError) {
@@ -30,6 +32,7 @@ function ProductDetails(): React.JSX.Element {
       <Container className={`${classProductDetails}__container`}>
         <h1 className={`${classProductDetails}__title`}>Product details</h1>
         <ProductDetail product={data} />
+        <NavigateButton variant='primary' />
       </Container>
     </Section>
   );

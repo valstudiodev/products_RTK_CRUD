@@ -7,12 +7,14 @@
   overflow: hidden;
   min-height: 100%;
   box-shadow: $shadow-card;
+  padding-block: 10px;
+  padding-inline: 10px;
 
   &__inner {
-    padding: 20px;
     display: flex;
     flex-direction: column;
     gap: 5px;
+    margin-bottom: 20px;
   }
 
   &__image-wrap {
@@ -56,6 +58,22 @@
   &__category {}
 
   &__brand {}
+
+  &__btn {
+
+    &--delete {
+      background-color: $color-button;
+      border-radius: 10px;
+      padding-block: 10px;
+      transition: all 0.3s;
+      padding-inline: 15px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: $color-button-hover;
+      }
+    }
+  }
 }
 
 .product-detail {

@@ -1,0 +1,34 @@
+@use '../../../shared/styles/variables/variables' as *;
+
+.create-form {
+  background-color: $color-surface-light;
+  padding: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  &__field {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+
+    &--label {
+      font-size: 18px;
+    }
+
+    &--input {
+      border: 1px solid white;
+      color: white;
+      border-radius: 8px;
+      padding-block: 2px;
+      padding-left: 8px;
+      width: 100%;
+    }
+  }
+}

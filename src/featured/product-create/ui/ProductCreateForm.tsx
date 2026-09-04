@@ -1,9 +1,14 @@
 import { CreateProductPayload } from "@/entities/product/model/productTypes";
 import ProductCreateField from "./ProductCreateField";
-import { ChangeEvent, useState } from "react";
+import { ChangeEvent, FormEvent, useState } from "react";
+import '../model/styles.scss';
+import { useAddProductMutation } from "@/app/api/baseApi";
+import ButtonSubmit from "@/shared/ui/ButtonSubmit/ButtonSubmit";
 
 function ProductCreateForm(): React.JSX.Element {
   const classCreateForm = 'create-form'
+
+  const [addProduct, { isLoading }] = useAddProductMutation()
 
   const [formData, setFormData] = useState<CreateProductPayload>({
     title: '',
@@ -32,10 +37,22 @@ function ProductCreateForm(): React.JSX.Element {
     })
   }
 
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>): Promise<void> => {
+    e.preventDefault()
+
+    try {
+      const result = await addProduct(formData).unwrap()
+
+      console.log('---Add product result:', result);
+    } catch (error) {
+      console.log('---Add product ERROR:', error);
+    }
+  }
+
   return (
     <form
       className={classCreateForm}
-      action=""
+      onSubmit={handleSubmit}
     >
       <ProductCreateField
         label="Title"
@@ -73,6 +90,9 @@ function ProductCreateForm(): React.JSX.Element {
         value={formData.brand}
         name='brand'
       />
+      <ButtonSubmit disabled={isLoading}>
+        {isLoading ? 'Loading' : 'Add product'}
+      </ButtonSubmit>
     </form>
   );
 }

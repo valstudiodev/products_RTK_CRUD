@@ -1,7 +1,7 @@
 import { useGetProductsQuery } from '@/app/api/baseApi';
 import '../model/productListStyles.scss';
 import ProductCard from '@/entities/product/ui/ProductCard';
-import { Link } from 'react-router';
+import Loader from '@/shared/ui/Loader/Loader';
 
 function ProductList(): React.JSX.Element {
   const classProductList = 'product-list'
@@ -9,7 +9,7 @@ function ProductList(): React.JSX.Element {
   const { data, isLoading, isError } = useGetProductsQuery()
 
   if (isLoading) {
-    return <div>Loading...</div>
+    return <Loader />
   }
 
   if (isError) {
@@ -23,12 +23,7 @@ function ProductList(): React.JSX.Element {
           key={product.id}
           className={`${classProductList}__item`}
         >
-          <Link
-            to={`/products/${product.id}`}
-            className={`${classProductList}__link`}
-          >
-            <ProductCard product={product} />
-          </Link>
+          <ProductCard product={product} />
         </li>
       ))}
 
