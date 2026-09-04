@@ -1,0 +1,1 @@
+import{c as e}from"./index-CJX2V84M.js";var t=e();function n({children:e,className:n=``}){return(0,t.jsx)(`section`,{className:` ${n}`.trim(),children:e})}export{n as t};
