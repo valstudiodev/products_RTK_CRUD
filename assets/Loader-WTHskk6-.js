@@ -1,0 +1,1 @@
+import{c as e}from"./index-BsE740Vg.js";var t=e();function n(){let e=`loader`;return(0,t.jsx)(`div`,{className:e,children:(0,t.jsx)(`p`,{className:`${e}_text`,children:`Loader...`})})}export{n as t};

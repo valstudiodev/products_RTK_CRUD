@@ -1,1 +1,0 @@
-import{c as e,s as t}from"./index-CJX2V84M.js";import{t as n}from"./Section-C7tZwAfp.js";import{t as r}from"./ProductCreateForm-BMtDjs8t.js";var i=e();function a(){let e=`product-create`;return(0,i.jsx)(n,{className:e,children:(0,i.jsxs)(t,{className:`${e}__container`,children:[(0,i.jsx)(`h1`,{children:`Product create page`}),(0,i.jsx)(r,{})]})})}export{a as default};
